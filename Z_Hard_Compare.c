@@ -5,8 +5,6 @@ int main(){
     scanf("%f %f %f %f",&a,&b,&c,&d);
     double x= b* log(a);
     double y= d* log(c);
-    printf("%llf",x);
-    printf("%llf",y);
     if(x>y){
         printf("YES");
     }
