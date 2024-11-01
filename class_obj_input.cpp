@@ -11,9 +11,9 @@ int main(){
     Car o;
     cin.getline(o.name,100);
     cin>>o.weight;
-    getchar();
+    getchar();//skip a enter char;
     cin.getline(o.color,100);
     cin>>o.prize;
-    cout<<o.name<<" "<<o.color<<" "<<o.prize;
+    cout<<o.name<<" "<<o.weight<<" "<<o.color<<" "<<o.prize;
     return 0;
 }
