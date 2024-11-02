@@ -13,7 +13,7 @@ int main(){
         cout<<ar[i]<<" ";
     }
     cout<<endl;
-    sort(ar,ar+n,greater<int>());
+    sort(ar,ar+n,greater<int>());//dessending order
     for(int i=0; i<n; i++){
         cout<<ar[i]<<" ";
     }

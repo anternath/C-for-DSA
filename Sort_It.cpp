@@ -11,5 +11,9 @@ int main(){
     for(int i=0; i<n; i++){
         cout<<ar[i]<<" ";
     }
-    return 0;
+    cout<<endl;
+    sort(ar,ar+n,greater<int>());
+    for(int i=0; i<n; i++){
+        cout<<ar[i]<<" ";
+    }
 }
