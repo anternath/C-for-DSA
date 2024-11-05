@@ -4,7 +4,7 @@ int main(){
     int an;
     string name;
     cin>>an;
-    cin.ignore();
+    // cin.ignore();//skip one charater
     getchar();
     getline(cin,name);
     cout<<name;
