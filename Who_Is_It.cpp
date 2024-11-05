@@ -3,34 +3,62 @@ using namespace std;
 class Student{
     public:
     int id;
-    char name[101];
-    char section;
+    char name[102];
+    char s;
     int mark;
-    
 };
 int main(){
     int t;
     cin>>t;
+    Student a1;
+    Student a2;
+    Student a3;
     for(int i=1; i<=t; i++){
-        Student *obj = new Student;
-        Student *obj1 = new Student;
-        Student *obj2 = new Student;
-        
-        cin>>obj->id>>obj->name>>obj->section>>obj->mark;
-        cin>>obj1->id>>obj1->name>>obj1->section>>obj1->mark;
-        cin>>obj2->id>>obj2->name>>obj2->section>>obj2->mark;
-        if(obj->mark>obj1->mark&&obj->mark>obj2->mark){
-            cout<<obj->id<<" "<<obj->name<<" "<<obj->section<<" "<<obj->mark<<endl;
+        cin>>a1.id>>a1.name>>a1.s>>a1.mark;
+        cin>>a2.id>>a2.name>>a2.s>>a2.mark;
+        cin>>a3.id>>a3.name>>a3.s>>a3.mark;
+        // cout<<a1.id<<" "<<a1.name<<" "<<a1.s<<" "<<a1.mark<<endl;
+        // cout<<a2.id<<" "<<a2.name<<" "<<a2.s<<" "<<a2.mark<<endl;
+        // cout<<a3.id<<" "<<a3.name<<" "<<a3.s<<" "<<a3.mark<<endl;
+        if(a1.mark>a2.mark&&a1.mark>a3.mark){
+                    cout<<a1.id<<" "<<a1.name<<" "<<a1.s<<" "<<a1.mark<<endl;
+
         }
-        else if(obj1->mark>obj->mark&&obj1->mark>obj2->mark){
-            cout<<obj1->id<<" "<<obj1->name<<" "<<obj1->section<<" "<<obj1->mark<<endl;
+        else if(a2.mark>a1.mark&&a2.mark>a3.mark){
+                    cout<<a2.id<<" "<<a2.name<<" "<<a2.s<<" "<<a2.mark<<endl;
+
         }
-        else if(obj2->mark>obj->mark&&obj2->mark>obj1->mark){
-            cout<<obj2->id<<" "<<obj2->name<<" "<<obj2->section<<" "<<obj2->mark<<endl;
+        else if(a3.mark>a2.mark&&a3.mark>a1.mark){
+                    cout<<a3.id<<" "<<a3.name<<" "<<a3.s<<" "<<a3.mark<<endl;
+
         }
-        delete obj;
-        delete obj1;
-        delete obj2;
+        else if(a1.mark==a2.mark){
+            if(a1.id<a2.id){
+                cout<<a1.id<<" "<<a1.name<<" "<<a1.s<<" "<<a1.mark<<endl;
+
+            }
+            else{
+             cout<<a2.id<<" "<<a2.name<<" "<<a2.s<<" "<<a2.mark<<endl;
+              }
+        }
+        else if(a1.mark==a3.mark){
+            if(a1.id<a3.id){
+                cout<<a1.id<<" "<<a1.name<<" "<<a1.s<<" "<<a1.mark<<endl;
+
+            }
+            else{
+             cout<<a3.id<<" "<<a3.name<<" "<<a3.s<<" "<<a3.mark<<endl;
+            }
+        }
+        else if(a2.mark==a3.mark){
+            if(a2.id<a3.id){
+             cout<<a2.id<<" "<<a2.name<<" "<<a2.s<<" "<<a2.mark<<endl;
+
+            }
+            else{
+             cout<<a3.id<<" "<<a3.name<<" "<<a3.s<<" "<<a3.mark<<endl;
+            }
+        }
     }
     return 0;
 }
