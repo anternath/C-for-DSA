@@ -13,7 +13,7 @@ class Person{
         english = en;
     }
     void fun(){
-        cout<<name<<" "<<age;
+        cout<<name<<" "<<age<<endl;
     }
     int Total_marks(){
         return math+english;
