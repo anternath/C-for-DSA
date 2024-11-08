@@ -10,15 +10,14 @@ public:
     int eng_marks;
 };
 bool cmp(Student a, Student b){
-    if((a.eng_marks+a.math_marks) > (b.eng_marks+b.math_marks)){
-        return true;
-    }
-    else{
-        if((a.eng_marks+a.math_marks) == (b.eng_marks+b.math_marks)){
-            return a.id<b.id;
-        }
-        return false;
-    }
+    if(a.eng_marks!=b.eng_marks)
+        return a.eng_marks>b.eng_marks;
+    
+    if(a.math_marks!=b.math_marks)
+        return a.math_marks>b.math_marks;
+        return a.id<b.id;
+    
+    
 }
 int main(){
     int n;
