@@ -5,9 +5,6 @@ int main(){
     cin>>n;
     
     for(int i=0; i<=n; i++){
-        for(int k=n; k>1; k--){
-        cout<<" ";
-    }
         int number =1;
         
         for(int j=0; j<=i; j++){
