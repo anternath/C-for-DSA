@@ -13,6 +13,6 @@ int main(){
     char ch[11]="Anter Nath";
     fun1(name);
     fun2(ch);
-    cout<<name.size()<<endl;
+    cout<<name.size();
     return 0;
 }
