@@ -3,7 +3,7 @@ using namespace std;
 int fun(string name){
     int cnt=0;
     for(char c:name){
-        if(c>'A'&&c<'Z'){
+        if(c>='A'&&c<='Z'){
             c=c+32;
         }
         if(c=='a'||c=='i'||c=='e'||c=='o'||c=='u'){

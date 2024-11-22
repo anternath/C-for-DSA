@@ -1,13 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
-int fun(int n){
+long long fun(long long n){
     if(n==0) return 1;
     long long fact= fun(n-1);
-    fact *=n;
-    return fact;
+    return fact*n;
 }
 int main(){
-    int n;
+    long long n;
     cin>>n;
     long long fact= fun(n);
     cout<<fact;
