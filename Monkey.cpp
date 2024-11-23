@@ -1,15 +1,26 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    char ch[100002];
-    while(cin.getline(ch,100002))
-    {sort(ch,ch+strlen(ch));
-    for(size_t i=0; i<strlen(ch); i++){
-        if(ch[i]!=' '){
-            cout<<ch[i];
+    string name;
+    
+    while(getline(cin,name)){
+        int cnt[26]={0};
+        for(char c:name){
+            if(c!=' '){
+                int val= c-'a';
+                cnt[val]++;
+            }
+        }
+        for(int i=0; i<26; i++){
+        if(cnt[i]!=0){
+           for(int j=1; j<=cnt[i]; j++){
+             char ch= i+'a';
+            cout<<ch;
+           }
         }
     }
     cout<<endl;
+    
     }
     
     return 0;
